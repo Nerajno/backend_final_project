@@ -1,16 +1,20 @@
 import React, {Component} from 'react';
-import Login from './Login'
-import Register from './Register'
+import  {render} from 'react-dom';
+import {Router, Route} from 'react-router';
+
+import Login from './Login';
+import { Register } from 'Components/Register';
 
 class MainContainer extends React.Component{
     render(){
         return(
-            <div className="container-fluid" id="" verticalAlign='middle'>
+            <Router>
+            {/* <div className="container-fluid" id="" verticalAlign='middle'>
             <p>Testing</p>
-            <br/>
-            <Register />
-
-            </div>
+            <br/> 
+              </div>*/}
+            <Route path={"Register"} component={Register} />
+            </Router>
     );
     }
 }

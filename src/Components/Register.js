@@ -1,7 +1,7 @@
 import React, {Component}  from 'react'
 import { Button, Form, Grid, Header, Segment } from 'semantic-ui-react'
 
-export default class Register extends Component {
+export default class Register extends React.Component {
     render() {
         return (
   <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
@@ -22,6 +22,6 @@ export default class Register extends Component {
       </Form>
     </Grid.Column>
   </Grid>
-)
+);
 }
 }
