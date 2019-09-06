@@ -1,6 +1,7 @@
 import React  from 'react'
 import { Button, Form, Grid, Header, Segment } from 'semantic-ui-react'
 
+
 export default class Register extends React.Component {
   render() {
     return (
@@ -15,6 +16,7 @@ export default class Register extends React.Component {
               <Form.Input fluid icon='lock' iconPosition='left' placeholder='Password' type='password' />
               <Form.Input fluid icon='lock' iconPosition='left' placeholder=' Confirm Password' type='password' />
               <Form.Input fluid icon='user' iconPosition='left' placeholder='E-mail address' />
+              
               <Button color='teal' fluid size='large'>
                 Register
           </Button>
