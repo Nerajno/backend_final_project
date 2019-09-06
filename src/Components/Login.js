@@ -1,17 +1,23 @@
 import React from 'react'
 import { Button, Form, Grid, Header, Segment, Message } from 'semantic-ui-react'
-//import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-//import Landing from '../Landing'
-//import  Register from './Register';
+
 
 export default class Login extends React.Component {
+  
+  state = {
+    username: "",
+    password: ""
+  }
+
+
+
   render() {
     return (
   <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
     <Grid.Column style={{ maxWidth: 450 }}>
       <Header as='h2' color='teal' textAlign='center'>
-        Log-in to your account
+        Log-in to Your Account
       </Header>
       <Form size='large'>
         <Segment stacked>

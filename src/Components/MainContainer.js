@@ -7,14 +7,14 @@ import Landing from '../Landing'
 import Login from './Login';
 import  Register from './Register';
 
-class MainContainer extends React.Component  {
 
+class MainContainer extends React.Component  {
 	render() {
 		return (
             <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
             <Grid.Column style={{ maxWidth: 450 }}>
               <Header as='h2' color='teal' textAlign='center'>
-                Welcome to Native Treats 
+              <a href='/'>Welcome to Native Treats</a>
           </Header>
           <Router>
           <Switch>
