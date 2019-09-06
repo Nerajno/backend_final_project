@@ -2,14 +2,26 @@ import React from 'react'
 import { Button, Form, Grid, Header, Segment, Message } from 'semantic-ui-react'
 
 
-
 export default class Login extends React.Component {
   
-  state = {
+  state={
     username: "",
     password: ""
   }
 
+
+  handleChange = event => {
+    this.setState({
+      setState({[event.target.name]: event.target.value }, ()=> console.log("state", this.state))
+    })
+
+  }
+  
+
+  handleSubmit = event => {
+    event.preventDefault()
+    console.log(this.state.password);
+  }
 
 
   render() {
@@ -19,11 +31,11 @@ export default class Login extends React.Component {
       <Header as='h2' color='teal' textAlign='center'>
         Log-in to Your Account
       </Header>
-      <Form size='large'>
+      <Form onSubmit={this.handleSubmit} size='large'>
         <Segment stacked>
-          <Form.Input fluid icon='user' iconPosition='left' placeholder='E-mail address' />
-          <Form.Input fluid icon='lock' iconPosition='left' placeholder='Password' type='password' />
-          <Button color='teal' fluid size='large'>
+          <Form.Input fluid icon='user' iconPosition='left' placeholder='Username' type='' />
+          <Form.Input fluid icon='lock' iconPosition='left' placeholder='Password' type='password' value={this.state.password}/>
+          <Button color='teal' fluid size='large'  type='submit'>
             Login
           </Button>
         </Segment>
@@ -35,4 +47,4 @@ export default class Login extends React.Component {
   </Grid>
     );
   }
-}
+};

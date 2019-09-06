@@ -8,7 +8,7 @@ export default class Register extends React.Component {
       <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
         <Grid.Column style={{ maxWidth: 450 }}>
           <Header as='h2' color='teal' textAlign='center'>
-            Create your account
+            Create Your Account
       </Header>
           <Form size='large'>
             <Segment stacked>
