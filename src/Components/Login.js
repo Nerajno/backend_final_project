@@ -7,21 +7,21 @@ export default class Login extends React.Component {
   state={
     username: "",
     password: ""
-  }
+   }
 
 
-  handleChange = event => {
-    this.setState({
-      setState({[event.target.name]: event.target.value }, ()=> console.log("state", this.state))
-    })
+  // handleChange = event => {
+  //   this.setState({
+  //     setState({[event.target.name]: event.target.value }, ()=> console.log("state", this.state))
+  //   })
 
-  }
+  // }
   
 
-  handleSubmit = event => {
-    event.preventDefault()
-    console.log(this.state.password);
-  }
+  // handleSubmit = event => {
+  //   event.preventDefault()
+  //   console.log(this.state.password);
+  // }
 
 
   render() {
@@ -47,4 +47,4 @@ export default class Login extends React.Component {
   </Grid>
     );
   }
-};
+}
