@@ -3,26 +3,23 @@ import { Button, Form, Grid, Header, Segment, Message } from 'semantic-ui-react'
 
 
 export default class Login extends React.Component {
-  
-  state={
-    username: "",
-    password: ""
+   constructor(props){
+     super(props)
+  this.state={
+    username: null,
+    password: null
    }
+  }
 
 
-  // handleChange = event => {
-  //   this.setState({
-  //     setState({[event.target.name]: event.target.value }, ()=> console.log("state", this.state))
-  //   })
+  handleSubmit = (event) => {
+    event.preventDefault()
+  }
 
-  // }
   
-
-  // handleSubmit = event => {
-  //   event.preventDefault()
-  //   console.log(this.state.password);
-  // }
-
+  handleChange = (event) => {
+    console.log(event.target.value);
+ }
 
   render() {
     return (
@@ -33,8 +30,8 @@ export default class Login extends React.Component {
       </Header>
       <Form onSubmit={this.handleSubmit} size='large'>
         <Segment stacked>
-          <Form.Input fluid icon='user' iconPosition='left' placeholder='Username' type='' />
-          <Form.Input fluid icon='lock' iconPosition='left' placeholder='Password' type='password' value={this.state.password}/>
+          <Form.Input fluid icon='user' iconPosition='left' placeholder='Username' type='username' value={this.state.username} onChange={this.handleChange}/>
+          <Form.Input fluid icon='lock' iconPosition='left' placeholder='Password' type='password' value={this.state.password} onChange={this.handleChange}/>
           <Button color='teal' fluid size='large'  type='submit'>
             Login
           </Button>
