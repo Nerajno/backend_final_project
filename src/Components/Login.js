@@ -7,18 +7,24 @@ export default class Login extends React.Component {
      super(props)
   this.state={
     username: null,
-    password: null
+    //password: null
    }
   }
 
 
   handleSubmit = (event) => {
     event.preventDefault()
+    console.log(this.state.username, this.state.password);
+
   }
 
   
   handleChange = (event) => {
-    console.log(event.target.value);
+    this.setState({
+      username: event.target.value,
+      password: event.target.value
+    });
+   //console.log(this.state.username);
  }
 
   render() {
@@ -31,7 +37,7 @@ export default class Login extends React.Component {
       <Form onSubmit={this.handleSubmit} size='large'>
         <Segment stacked>
           <Form.Input fluid icon='user' iconPosition='left' placeholder='Username' type='username' value={this.state.username} onChange={this.handleChange}/>
-          <Form.Input fluid icon='lock' iconPosition='left' placeholder='Password' type='password' value={this.state.password} onChange={this.handleChange}/>
+          <Form.Input fluid icon='lock' iconPosition='left' placeholder='Password' type='password' value={this.state.password} />
           <Button color='teal' fluid size='large'  type='submit'>
             Login
           </Button>

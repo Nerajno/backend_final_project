@@ -1,5 +1,5 @@
 import React from 'react';
-import {  Grid, Header,} from 'semantic-ui-react';
+import { Grid, Header,} from 'semantic-ui-react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 // Component Imports
@@ -11,6 +11,7 @@ import  Register from './Register';
 class MainContainer extends React.Component  {
 	render() {
 		return (
+      
             <Grid textAlign='center' style={{ height: '80vh' }} verticalAlign='middle'>
             <Grid.Column style={{ maxWidth: 450 }}>
               <Header as='h2' color='teal' textAlign='center'>
