@@ -5,7 +5,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 // Component Imports
 import Landing from '../Landing'
 import Login from './Login';
-import  Register from './Register';
+import Register from './Register';
+import LoggedInUser from './LoggedInUser.'
 
 
 class MainContainer extends React.Component  {
@@ -16,6 +17,7 @@ class MainContainer extends React.Component  {
             <Grid.Column style={{ maxWidth: 450 }}>
               <Header as='h2' color='teal' textAlign='center'>
               <a href='/'>Welcome to Native Treats</a>
+            <LoggedInUser />
           </Header>
           <Router>
           <Switch>
