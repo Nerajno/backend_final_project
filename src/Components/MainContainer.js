@@ -21,7 +21,9 @@ class MainContainer extends React.Component  {
           <Switch>
               <Route exact path='/' render={() => <Landing />}/>
               <Route exact path='/Login' render={() => <Login />}/>
-              <Route exact path='/Register' render={() => <Register />}/>        
+              <Route exact path='/Register' render={() => <Register />}/>   
+              <Route /> 
+              {/* log route above to render to specific route if logged in       */}
           </Switch>
           </Router>
             </Grid.Column>
