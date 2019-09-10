@@ -11,6 +11,7 @@ import LoggedInUser from './LoggedInUser'
 
 class MainContainer extends React.Component  {
 	render() {
+    const loggedIn = localStorage.jwt !== undefined;
 		return (
       
             <Grid textAlign='center' style={{ height: '80vh' }} verticalAlign='middle'>
@@ -23,8 +24,8 @@ class MainContainer extends React.Component  {
           <Switch>
               <Route exact path='/' render={() => <Landing />}/>
               <Route exact path='/Login' render={() => <Login />}/>
-              <Route exact path='/Register' render={() => <Register />}/>   
-              <Route exact path= '/LoggedInUser' render={() => <LoggedInUser />}/> 
+              <Route exact path='/Register' render={() => <Register />}/> 
+              <Route exact path= '/LoggedInUser' render={(props) => <LoggedInUser props={props} />}/>   
               {/* log route above to render to specific route if logged in       */}
           </Switch>
           </Router>

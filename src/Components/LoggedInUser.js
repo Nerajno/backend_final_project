@@ -1,17 +1,21 @@
 import React from 'react';
-import { Grid, Header,} from 'semantic-ui-react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+//import { Grid, Header,} from 'semantic-ui-react';
+//import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 // Component Imports
-import Menu from './Menu'
+import Nav from './Menu'
 import LoggedInUserCont from './LoggedInUserCont'
 
 
 export default class LoggedInUser extends React.Component{
+    constructor(props){
+        super(props)
+    }
+
     render() {
         return (
             <div>
-            <Menu />
+            <Nav props={this.props} />
             <LoggedInUserCont />
             </div>
         );

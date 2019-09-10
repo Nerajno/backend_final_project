@@ -4,7 +4,12 @@ import { Input, Menu } from 'semantic-ui-react'
 export default class Nav extends Component {
   state = { activeItem: 'home' }
 
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+  handleItemClick = (e, { name }) => {
+    this.setState({ activeItem: name })
+    localStorage.clear();
+    //console.log(this.props.props.props.history,"Present");
+    this.props.props.props.history.push('/Login')
+  }
 
   render() {
     const { activeItem } = this.state

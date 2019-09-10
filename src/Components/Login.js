@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button, Form, Grid, Header, Segment, Message } from 'semantic-ui-react'
+import {Redirect} from 'react-router-dom'
 
 
 export default class Login extends React.Component {
@@ -13,7 +14,7 @@ export default class Login extends React.Component {
 
 
   handleSubmit = (event) => {
-    event.preventDefault()
+    //event.preventDefault()
     console.log(this.state.username, this.state.password);
     fetch("http://localhost:3000/login", {
       method: 'POST',
@@ -22,7 +23,12 @@ export default class Login extends React.Component {
         'Content-Type': 'application/json'
       }
     }).then(res => res.json())
-      .then(response => console.log('Success', response))
+          .then(response => {
+            localStorage.setItem("jwt", response.jwt)
+
+        })
+        
+      // .then(response => console.log('Success', response))
   };
   
 
@@ -35,6 +41,7 @@ export default class Login extends React.Component {
 
   render() {
     return (
+    localStorage.jwt !== undefined ? <Redirect to='/LoggedInUser'/> : 
   <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
     <Grid.Column style={{ maxWidth: 450 }}>
       <Header as='h2' color='teal' textAlign='center'>
@@ -53,7 +60,6 @@ export default class Login extends React.Component {
         New to us? <a href='./Register'>Sign Up</a>
       </Message>
     </Grid.Column>
-  </Grid>
-    );
-  }
+  </Grid> );}
+  
 }
