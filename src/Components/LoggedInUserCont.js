@@ -2,7 +2,9 @@ import React from 'react';
 
 // Component Imports
 import RestaurantCollection from './RestaurantCollection' 
-export default class LoggedInUserCont extends PureComponent {
+
+
+export default class LoggedInUserCont extends React.Component {
  
 
     render() {

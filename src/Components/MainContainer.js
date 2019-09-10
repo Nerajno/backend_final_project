@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Landing from '../Landing'
 import Login from './Login';
 import Register from './Register';
-import LoggedInUser from './LoggedInUser.'
+import LoggedInUser from './LoggedInUser'
 
 
 class MainContainer extends React.Component  {
@@ -17,14 +17,14 @@ class MainContainer extends React.Component  {
             <Grid.Column style={{ maxWidth: 450 }}>
               <Header as='h2' color='teal' textAlign='center'>
               <a href='/'>Welcome to Native Treats</a>
-            <LoggedInUser />
+            {/* <LoggedInUser /> */}
           </Header>
           <Router>
           <Switch>
               <Route exact path='/' render={() => <Landing />}/>
               <Route exact path='/Login' render={() => <Login />}/>
               <Route exact path='/Register' render={() => <Register />}/>   
-              <Route /> 
+              <Route exact path= '/LoggedInUser' render={() => <LoggedInUser />}/> 
               {/* log route above to render to specific route if logged in       */}
           </Switch>
           </Router>

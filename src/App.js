@@ -3,6 +3,15 @@ import React from 'react';
 import MainContainer from './Components/MainContainer'
 import './App.css';
 
+//Store
+
+//Action
+
+//Reducer
+
+//Dispatch
+
+
 function App() {
   return (
       <MainContainer />

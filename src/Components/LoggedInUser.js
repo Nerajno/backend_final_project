@@ -7,11 +7,13 @@ import Menu from './Menu'
 import LoggedInUserCont from './LoggedInUserCont'
 
 
-export default class RestaurantCard extends React.Component{
+export default class LoggedInUser extends React.Component{
     render() {
         return (
+            <div>
             <Menu />
             <LoggedInUserCont />
+            </div>
         );
     }
 }
