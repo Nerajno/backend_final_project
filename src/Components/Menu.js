@@ -6,9 +6,10 @@ export default class Nav extends Component {
 
   handleItemClick = (e, { name }) => {
     this.setState({ activeItem: name })
-    localStorage.clear();
+    window.localStorage.clear();
     //console.log(this.props.props.props.history,"Present");
     this.props.props.props.history.push('/Login')
+    // window.localStorage.clear();
   }
 
   render() {

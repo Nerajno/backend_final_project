@@ -25,7 +25,6 @@ export default class Login extends React.Component {
     }).then(res => res.json())
           .then(response => {
             localStorage.setItem("jwt", response.jwt)
-
         })
         
       // .then(response => console.log('Success', response))

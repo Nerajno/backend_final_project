@@ -3,18 +3,36 @@ import { Button, Form, Grid, Header, Segment } from 'semantic-ui-react'
 
 
 export default class Register extends React.Component {
-  state = {
-    username: "",
-    password: "",
-    email: ""
+  constructor(props){
+    super(props)
+ this.state={
+  //  username: "",
+  //  password: "",
+  //  password_conformation:"",
+  //  email: ""
   }
+ }
 
-
+  handleSubmit = (event) => {
+    //event.preventDefault()
+    //console.log(this.state.username, this.state.password);
+    fetch("http://localhost:3000/users", {
+      method: 'POST',
+      body: JSON.stringify({user: this.state}),
+      headers:{
+        'Content-Type': 'application/json'
+      }
+    }).then(res => res.json())
+      .then(response => (console.log(response)
+        ))
+  };
 
   handleChange = (event) => {
     this.setState({
       [event.target.name]: event.target.value
     });
+    console.log(this.state);
+    
  }
 
   render() {
@@ -26,10 +44,10 @@ export default class Register extends React.Component {
       </Header>
           <Form onSubmit={this.handleSubmit} size='large'>
             <Segment stacked>
-              <Form.Input fluid icon='user' iconPosition='left' placeholder='Username' type="text" value={this.state.username} onChange={this.handleChange}/>
-              <Form.Input fluid icon='lock' iconPosition='left' placeholder='Password' type='password' value={this.state.password} onChange={this.handleChange} />
-              <Form.Input fluid icon='lock' iconPosition='left' placeholder='Confirm Password' type='password' value={this.state.password} onChange={this.handleChange} />
-              <Form.Input fluid icon='mail' iconPosition='left' placeholder='E-mail Address' type='text' value={this.state.email} onChange={this.handleChange} />
+              <Form.Input fluid icon='user' iconPosition='left' placeholder='Username'  name="username"  type="text" value={this.state.value} onChange={this.handleChange}/>
+              <Form.Input fluid icon='lock' iconPosition='left' placeholder='Password' name="password" type='password' value={this.state.password} onChange={this.handleChange} />
+              <Form.Input fluid icon='lock' iconPosition='left' placeholder='Confirm Password' name="password_confirmation" type='password_confirmation' value={this.state.password_confirmation} onChange={this.handleChange} />
+              <Form.Input fluid icon='mail' iconPosition='left' placeholder='E-mail Address' type='text' name="email" value={this.state.email} onChange={this.handleChange} />
               <Button color='teal' fluid size='large' type="submit">
                 Register
           </Button>
