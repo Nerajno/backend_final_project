@@ -4,7 +4,7 @@ import { Input, Menu } from 'semantic-ui-react'
 export default class Nav extends Component {
   state = { activeItem: 'home' }
 
-  handleItemClick = (e, { name }) => {
+  handleItemClick = ({ name }) => {
     this.setState({ activeItem: name })
     window.localStorage.clear();
     this.props.props.props.history.push('/Login')
@@ -31,7 +31,6 @@ export default class Nav extends Component {
             onClick={this.handleItemClick}
             icon='sign-out'
           />
-          
         </Menu.Menu>
       </Menu>
     )

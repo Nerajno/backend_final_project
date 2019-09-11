@@ -1,14 +1,14 @@
 import React from 'react'
-import { Card, Icon, Image } from 'semantic-ui-react'
+import { Card } from 'semantic-ui-react'
 
 
 
 const AddNewRestaurantCard= () => (
   <Card>
-  <div class="card">
-    <div class="ui bottom attached button">
-      <i class="add icon"></i>
-      Add Friend
+  <div className="card">
+    <div className="ui bottom attached button">
+      <i className="add icon"></i>
+      Add NewRestaurant
     </div>
   </div>
   </Card>

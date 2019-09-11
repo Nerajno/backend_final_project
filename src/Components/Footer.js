@@ -11,13 +11,10 @@ export default class Footer extends Component {
                    <Container textAlign='center'>
                        <List horizontal inverted divided link size='small'>
                            <List.Item as='a' href='#'>
-                               Site Map
-                           </List.Item>
-                           <List.Item as='a' href='#'>
                                Contact Us
                            </List.Item>
                            <List.Item as='a' href='#'>
-                               Terms and Conditions
+                            {/* Edit me */}
                            </List.Item>
                            <List.Item as='a' href='#'>
                                Privacy Policy
