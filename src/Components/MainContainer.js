@@ -11,7 +11,7 @@ import LoggedInUser from './LoggedInUser'
 
 class MainContainer extends React.Component  {
 	render() {
-    const loggedIn = localStorage.jwt !== undefined; // how to use
+    //const loggedIn = localStorage.jwt !== undefined; // how to use
 		return (
       
             <Grid textAlign='center' style={{ height: '90vh' }} verticalAlign='middle'>

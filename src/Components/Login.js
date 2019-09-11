@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Form, Grid, Header, Segment, Message } from 'semantic-ui-react';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Router, Route } from 'react-router-dom';
 
 export default class Login extends React.Component {
 	constructor(props) {
@@ -12,8 +12,8 @@ export default class Login extends React.Component {
 	}
 
 	handleSubmit = (event) => {
-		//event.preventDefault()
-		console.log(this.state.username, this.state.password);
+		event.preventDefault()
+		// console.log(this.state.username, this.state.password);
 		fetch('http://localhost:3000/login', {
 			method: 'POST',
 			body: JSON.stringify({ user: this.state }),
@@ -25,7 +25,11 @@ export default class Login extends React.Component {
 			.then((response) => {
 				localStorage.setItem('jwt', response.jwt);
       })
-      
+    
+      .then(<Redirect to="/LoggedInUser"/>)
+      this.props.history.push("/LoggedInUser");
+      console.log("test 1 ");
+      this.forceUpdate();
 
 		// .then(response => console.log('Success', response))
 	};

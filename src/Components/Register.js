@@ -1,18 +1,23 @@
 import React from 'react';
 import { Button, Form, Grid, Header, Segment } from 'semantic-ui-react';
+import { Redirect, Router, Route } from 'react-router-dom';
 
 export default class Register extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			//  username: "",
-			//  password: "",
-			//  password_conformation:"",
-			//  email: ""
+			 username: "",
+			 password: "",
+			 password_conformation:"",
+			 email: "",
 		};
 	}
 
-	handleSubmit = (event) => {
+	state = {
+		redirect: false
+	  }
+
+	handleSubmit = () => {
 		//event.preventDefault()
 		//console.log(this.state.username, this.state.password);
 		fetch('http://localhost:3000/users', {
@@ -23,18 +28,28 @@ export default class Register extends React.Component {
 			}
 		})
 			.then((res) => res.json())
-			.then((response) =>
-      event.target.reset()
-				// tell it to do something here
-			);
+			.then({redirect: true})
+			.then(console.log("Bugs everywhere"));
 	};
 
 	handleChange = (event) => {
 		this.setState({
 			[event.target.name]: event.target.value
 		});
-		console.log(this.state);
+		// console.log(this.state);
 	};
+
+	setRedirect = () => {
+		this.setState({
+		  redirect: true
+		})
+	  }
+
+	renderRedirect = () => {
+		if (this.state.redirect) {
+		  return <Redirect to="/Login" />
+		}
+	  }
 
 	render() {
 		return (
@@ -71,7 +86,7 @@ export default class Register extends React.Component {
 								iconPosition="left"
 								placeholder="Confirm Password"
 								name="password_confirmation"
-								type="password_confirmation"
+								type="password"
 								value={this.state.password_confirmation}
 								onChange={this.handleChange}
 							/>
@@ -85,7 +100,8 @@ export default class Register extends React.Component {
 								value={this.state.email}
 								onChange={this.handleChange}
 							/>
-							<Button color="teal" fluid size="large" type="submit">
+							{this.renderRedirect()}
+							<Button color="teal" fluid size="large" type="submit" onClick={this.setRedirect}>
 								Register
 							</Button>
 						</Segment>
