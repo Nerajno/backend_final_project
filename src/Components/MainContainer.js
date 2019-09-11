@@ -14,8 +14,8 @@ class MainContainer extends React.Component  {
     const loggedIn = localStorage.jwt !== undefined; // how to use
 		return (
       
-            <Grid textAlign='center' style={{ height: '80vh' }} verticalAlign='middle'>
-            <Grid.Column style={{ maxWidth: 650 }}>
+            <Grid textAlign='center' style={{ height: '90vh' }} verticalAlign='middle'>
+            <Grid.Column style={{ maxWidth: '80vw' }}>
               <Header as='h2' color='teal' textAlign='center'>
               <a href='/'>Welcome to Native Treats</a>
             {/* <LoggedInUser /> */}

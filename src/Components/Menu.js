@@ -7,20 +7,19 @@ export default class Nav extends Component {
   handleItemClick = (e, { name }) => {
     this.setState({ activeItem: name })
     window.localStorage.clear();
-    //console.log(this.props.props.props.history,"Present");
     this.props.props.props.history.push('/Login')
-    // window.localStorage.clear();
   }
 
   render() {
     const { activeItem } = this.state
 
     return (
-      <Menu secondary>
+      <Menu navbar>
         <Menu.Item
           name='home'
-          active={activeItem === 'home'}
+          active={activeItem === 'user'}
           onClick={this.handleItemClick}
+          icon="home"
         />
         <Menu.Menu position='right'>
           <Menu.Item>
