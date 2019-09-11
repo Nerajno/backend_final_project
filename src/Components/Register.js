@@ -28,7 +28,7 @@ export default class Register extends React.Component {
 			}
 		})
 			.then((res) => res.json())
-			.then({redirect: true})
+			// .then({redirect: true})
 			.then(console.log("Bugs everywhere"));
 	};
 
