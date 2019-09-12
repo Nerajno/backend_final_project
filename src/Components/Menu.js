@@ -8,6 +8,8 @@ export default class Nav extends Component {
     this.setState({ activeItem: name })
     window.localStorage.clear();
     this.props.props.props.history.push('/Login')
+    console.log(this.props);
+    
   }
 
   render() {

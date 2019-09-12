@@ -13,7 +13,7 @@ export default class Login extends React.Component {
 
 	handleSubmit = (event) => {
 		event.preventDefault()
-		// console.log(this.state.username, this.state.password);
+		console.log(this.state.username, this.state.password);
 		fetch('http://localhost:3000/login', {
 			method: 'POST',
 			body: JSON.stringify({ user: this.state }),
@@ -25,8 +25,7 @@ export default class Login extends React.Component {
 			.then((response) => {
 				localStorage.setItem('jwt', response.jwt);
 			})
-
-			.then(<Redirect to="/LoggedInUser" />)
+			// .then(<Redirect to="/LoggedInUser" />)
 		// Can use the state redirect from Loggin
 		//till then reload... 
 	};
@@ -51,15 +50,16 @@ export default class Login extends React.Component {
 	// }
 
 	// renderRedirect = () => {
-	// 	if (this.state.redirect) {
+	// 	// if (this.state.redirect) {
 	// 		return <Redirect to="/LoggedInUser" />
 	// 	}
 	// }
 
 	//   onClick={this.setRedirect}
-
-
 	//Redirect to LoggedIn => Stop
+
+
+
 
 	render() {
 		return localStorage.jwt !== undefined ? (
