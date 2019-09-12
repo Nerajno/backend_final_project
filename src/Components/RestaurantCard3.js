@@ -3,18 +3,18 @@ import { Card, Icon, Image } from 'semantic-ui-react'
 
 
 
-const RestaurantCard= () => (
+const RestaurantCard3= () => (
   <Card>
     <Image src='https://images1.westword.com/imager/8-rivers-cafe/u/original/5169888/5183935.0.jpg' wrapped ui={false} />
     <Card.Content>
-      <Card.Header>Island Treats</Card.Header> 
+      <Card.Header>The Smoking Pig</Card.Header> 
       {/* Place Restaurant */}
       <Card.Meta>
-        <span className='date'>Established in 2015</span>
+        <span className='date'>Established in 1990</span>
         {/* Website */}
       </Card.Meta>
       <Card.Description>
-        Caribbean cuisine crafted to your taste buds.
+        A relaxed environment catering to a slow and relaxed dining experience.
         {/* address */}
       </Card.Description>
     </Card.Content>
@@ -22,10 +22,10 @@ const RestaurantCard= () => (
       <a>
      
         <Icon name='comment icon' />
-        22 Comments
+        12 Comments
       </a>
     </Card.Content>
   </Card>
 )
 
-export default RestaurantCard
+export default RestaurantCard3
