@@ -11,26 +11,27 @@ export default class RestaurantCollection extends React.Component {
         console.log(allReviews);
 
         return (
-            <div className="container-fluid">
-                {allReviews.map(review =>  
-                    <div class="ui card">
-                    <div class="content">
-                      <a class="header">Rating{review.rating}</a>
-                      <div class="meta">
-                        <span class="date">Joined in 2013</span>
-                      </div>
-                      <div class="description">
-                        {review.comment}
-                      </div>
-                    </div>
-                  </div>)
-                    };
+            <div className="container fluid">
+            {/* //     {allReviews.map(review =>   */}
+            {/* //         <div class="ui card">
+            //         <div class="content">
+            //           <a class="header">Rating{review.rating}</a>
+            //           <div class="meta">
+            //             <span class="date">Joined in 2013</span>
+            //           </div>
+            //           <div class="description">
+            //             {review.comment}
+            //           </div>
+            //         </div>
+            //       </div>)
+            //         }; */}
 
-                <RestaurantCard />
-                <RestaurantCard />
-                <RestaurantCard />
-                <AddNewRestaurantCard />
+            {allReviews.map(review => <div>< RestaurantCard  props={review} /></div>)}    
             </div>
         )
     }
 }
+
+
+
+               
