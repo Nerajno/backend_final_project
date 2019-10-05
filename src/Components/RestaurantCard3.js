@@ -5,7 +5,7 @@ import { Card, Icon, Image } from 'semantic-ui-react'
 
 const RestaurantCard3= () => (
   <Card>
-    <Image src='https://images1.westword.com/imager/8-rivers-cafe/u/original/5169888/5183935.0.jpg' wrapped ui={false} />
+    <Image src='https://cdn2.imperialhotels.co.uk/london-pub-food.jpg?mtime=20161118124552' wrapped ui={false} />
     <Card.Content>
       <Card.Header>The Smoking Pig</Card.Header> 
       {/* Place Restaurant */}
