@@ -14,7 +14,17 @@ Open [http://localhost:3001](http://localhost:3001) to view it in the browser if
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
-## Things to do
-- [ ] Rewrite clear - ER User Stories
-- [ ] Rebuild it with from the ground up
-- [ ] Contact the media
+
+## Premise
+Native Treats is a Single Page Application that helps that users to find exotic restaurants in a specific location.
+
+## User Stories
+1. User should be able to create, update and delete a profile.
+2. User's profile should include their name, age , avatar,      personal description and have friends. 
+3. User should be able to search for ethnic themed restaraunts and save them to their profile.
+4. User should be able to make a comment that has a time stamp on each restaurant. 
+5. User should delete their preferential restaurants // favourite references from their profiles.
+
+Stretch Goals
+** User should be able to delete comments on each restaurant made by them. 
+** Users should be able to have their friends and view the restaurants they have in common.
