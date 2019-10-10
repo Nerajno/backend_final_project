@@ -5,6 +5,8 @@ The Front-end is currently hosted and can be viewed on  [Netlify](https://native
 ## Premise
 Native Treats is a Single Page Application that helps that users to find exotic restaurants in a specific location.
 
+
+
 ## User Stories
 1. User should be able to create, update and delete a profile.
 2. User's profile should include their name, age , avatar,      personal description and have friends. 
@@ -16,8 +18,15 @@ Stretch Goals
 ** User should be able to delete comments on each restaurant made by them. 
 ** Users should be able to have their friends and view the restaurants they have in common.
 
-## Available Scripts
+## Things to do
+- [ ] Add to final Portfolio.
+- [x] Rewrite clear User Stories.
+- [ ] Rebuild it with from the ground up.
+- [ ] Connect all the media.
+- [x] Complete better ReadMe.
+- [ ] Host the frontEnd on Netlify/ Heroku. 
 
+## Available Scripts
 If locally downloaded, in the project directory, you can run:
 
 ### `npm start`
