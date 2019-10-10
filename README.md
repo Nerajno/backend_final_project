@@ -1,4 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) as the Capstone project for my flatiron immersive course.
 
 ## Available Scripts
 
@@ -28,3 +28,11 @@ Native Treats is a Single Page Application that helps that users to find exotic 
 Stretch Goals
 ** User should be able to delete comments on each restaurant made by them. 
 ** Users should be able to have their friends and view the restaurants they have in common.
+
+## Things to do
+- [ ] Add to final Portfolio.
+- [x] Rewrite clear User Stories.
+- [ ] Rebuild it with from the ground up.
+- [ ] Connect all the media.
+- [x] Complete better ReadMe.
+- [ ] Host on Netlify/ Heroku. 
