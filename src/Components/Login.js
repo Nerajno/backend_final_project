@@ -25,7 +25,7 @@ export default class Login extends React.Component {
 			.then((response) => {
 				localStorage.setItem('jwt', response.jwt);
 			})
-			// .then(<Redirect to="/LoggedInUser" />)
+		// .then(<Redirect to="/LoggedInUser" />)
 		// Can use the state redirect from Loggin
 		//till then reload... 
 	};
@@ -66,7 +66,7 @@ export default class Login extends React.Component {
 			<Redirect to="/LoggedInUser" />
 		) : (
 				<Grid textAlign="center" style={{ height: '100vh' }} verticalAlign="middle">
-					<Grid.Column style={{ maxWidth: 450 }}>
+					<Grid.Column style={{ maxWidth: '25vh' }}>
 						<Header as="h2" color="teal" textAlign="center">
 							Log-in to Your Account
 					</Header>

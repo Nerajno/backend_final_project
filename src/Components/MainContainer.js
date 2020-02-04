@@ -15,7 +15,7 @@ class MainContainer extends React.Component  {
 		return (
       
             <Grid textAlign='center' style={{ height: '90vh' }} verticalAlign='middle'>
-            <Grid.Column style={{ maxWidth: '80vw' }}>
+            <Grid.Column style={{ maxWidth: '60vw' }}>
               <Header as='h2' color='teal' textAlign='center'>
               <a href='/'>Welcome to Native Treats</a>
             {/* <LoggedInUser /> */}
