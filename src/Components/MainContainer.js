@@ -10,12 +10,17 @@ import LoggedInUser from './LoggedInUser'
 
 
 class MainContainer extends React.Component  {
+  constructor(props) {
+    super(props);
+    this.state = {color: "#282c34" };
+  }
+  
 	render() {
     //const loggedIn = localStorage.jwt !== undefined; // how to use
 		return (
       
             <Grid textAlign='center' style={{ height: '90vh' }} verticalAlign='middle'>
-            <Grid.Column style={{ maxWidth: '60vw' }}>
+            <Grid.Column style={{ maxWidth: '50vw' }}>
               <Header as='h2' color='teal' textAlign='center'>
               <a href='/'>Welcome to Native Treats</a>
             {/* <LoggedInUser /> */}
