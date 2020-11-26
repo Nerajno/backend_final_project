@@ -1,6 +1,6 @@
 This project was created as a part of my capstone project for my Flatiron Immersive Course. 
 
-The Front-end is currently hosted and can be viewed on [Netlify](https://native-treats.netlify.com/) 
+The Front-end is currently hosted and can be viewed on [Netlify](https://native-treats.netlify.com/).
 
 ## Premise
 Native Treats is a Single Page Application that helps that users to find exotic restaurants in a specific location, 
