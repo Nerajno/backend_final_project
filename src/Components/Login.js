@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Form, Grid, Header, Segment, Message } from 'semantic-ui-react';
 import { Redirect } from 'react-router-dom';
-import { * } from Media;
+// import  * from Media;
 
 export default class Login extends React.Component {
 	constructor(props) {
